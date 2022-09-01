@@ -1,0 +1,11 @@
+<mat-card-title style="text-align:center; margin-top:3%">{{title}}</mat-card-title>
+<div style="text-align:center; margin:auto; width:50%" *ngFor="let todo of todo">
+    <app-todo-item [todo]="todo" (removeMyTask)="removeTask($event)" (complete)="completeNotif()" (remove)="removeNotif()">
+    </app-todo-item>
+</div>
+<div style="text-align:center; margin:auto; width:50%" *ngIf="todo.length == 0 ? true : false">Congratulations! No tasks to complete.</div>
+<div style="text-align:center; margin:auto; width:50%">
+    <app-todo-form (save)="addTask($event)">
+    </app-todo-form>
+</div>
+

@@ -1,0 +1,7 @@
+<mat-card style="width:50%; margin:auto; text-align:center; margin-bottom:10px"> 
+    <form>
+        <label style="padding:5px">Add a Task:</label><br>
+        <input style="margin-bottom:5px" name="task" [(ngModel)]="newTask"><br>
+        <button mat-flat-button color="accent" style="padding:5px" (click)="addTask()">Add Task</button>
+    </form>
+</mat-card>
